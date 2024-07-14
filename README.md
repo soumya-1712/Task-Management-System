@@ -118,12 +118,37 @@ Detailed database schema with tables, fields, and relationships.
 
 ### Folder Structure
   ```bash
-  app/
-  init.py
-  models.py
-  routes.py
-  templates/
-  static/
+   app/
+      auth/
+         __init__.py
+      auth/
+         routes.py
+      main/
+         __init.py
+      main/
+         routes.py
+      static/
+         css/
+            styles.css
+      static/
+         js/
+            scripts.js
+      templates/
+         base.html
+         index.html
+         signup.html
+         login.html
+         add_task.html
+         tasks.html
+      __init__.py
+      auth.py
+      config.py
+      forms.py
+      models.py
+      routes.py
+      views.py
+   app.py
+   run.py
   ```
 
 
