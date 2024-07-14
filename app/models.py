@@ -12,7 +12,7 @@ class Task(db.Model):
     complete = db.Column(db.String(20), default=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     category_id = db.Column(db.Integer,db.ForeignKey('category.id'))
-    
+     
     def __repr__(self):
         return f'<Task {self.title}>'
     # def to_dic(self):
