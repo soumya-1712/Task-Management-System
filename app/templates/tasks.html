@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Tasks{% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="col-3">
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="{{url_for('index', category='my-task')}}">My Tasks</a></li>
+                {% for category in categories %}
+                <li>
+                    <a href="{{url_for('index',category=category.name)}}">{{category.name}}</a>
+
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-9">
+            <h2>Tasks in {{selected_category}}</h2>
+            <ul>
+                {% for task in tasks %}
+                <li>
+                    {{task.title}}-{{task.description}}-{{task.deadline}}-{{task.complete}}
+                </li>
+                {% endfor %}
+            </ul>
+            <a href = "{{url_for('add_task')}}">Add Task</a>
+
+        </div>
+    </div>
+{% endblock %}
