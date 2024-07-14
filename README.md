@@ -78,7 +78,7 @@ Ensure all necessary environment variables are set, especially `SECRET_KEY` and 
 - Flask
 - Flask-Login
 - Flask-SQLAlchemy
-
+ 
 ## Architecture
 
 ### Overview
